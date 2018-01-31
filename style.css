@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: 1fr 20px;
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    background-image: url("img/moon.jpg");
+    background-repeat: no-repeat;
+    color: #fffbf9;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+aside,
+.invitation {
+    padding: 1vw;
+    margin: 1vw;
+    background: rgba(22, 25, 37, 0.3);
+    border-radius:5%;
+    border: 2px solid #fffbf9;
+}
+
+aside {
+    animation: 4s ease-out 0s 1 slideInFromBottom;
+}
+
+aside h3 {
+    margin: 5vh 0;
+    font-size: 2vw;
+}
+
+.invitation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Rammetto One', cursive;
+    animation: 2s ease-out 0s 1 slideInFromTop;
+}
+
+.invitation h1{
+    line-height: 5vw;
+    font-size: 5vw;
+}
+
+.invitation p {
+    font-size: 1.5vw;
+}
+
+.invitation span {
+    font-size: 2.5vw;
+}
+
+a {
+    text-decoration: none;
+    color:#f6e8ea;
+}
+
+footer {
+    height:100%;
+    font-size:12px;
+    line-height:1.2;
+    text-align: center;
+    grid-column: 1;
+    background: rgba(22, 25, 37, 0.3);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-180%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media all and (max-width: 800px) {
+    main {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+
+    .invitation h1{
+        line-height: 10vw;
+        font-size: 10vw;
+    }
+
+    .invitation p {
+        font-size: 3vw;
+    }
+
+    .invitation span {
+    font-size: 4vw;
+}
+
+    aside h3 {
+        margin: 0 5vh;
+        font-size: 5vw;
+    }
+
+    .invitation {
+        margin: 5vw;
+        animation: 2s ease-out 0s 1 slideInFromRight;
+    }
+
+    aside {
+        animation: 4s ease-out 0s 1 slideInFromLeft;
+    }
+}
+
+
+/* colors
+black: #161925
+snow: #fffbf9
+main: #f6e8ea
